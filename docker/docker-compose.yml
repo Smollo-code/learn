@@ -1,9 +1,10 @@
 version: "3.8"
+
 services:
   nginx:
     container_name: learn_nginx
     volumes:
-      - ./..:var/www/learn
+      - ./..:/var/www/learn
       - ./nginx/templates:/etc/nginx/templates
     ports:
       - "80:80"
@@ -12,6 +13,7 @@ services:
     build:
       context: ./..
       target: nginx
-      dockerfile: 'docker/dockerfile'
+      dockerfile: docker/Dockerfile
+
 networks:
   backend_net:

@@ -1,0 +1,139 @@
+
+h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container_register {
+    background-color: #ffffff;
+    border-radius: 100px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 300px;
+    max-height: 600px;
+    width: 100%;
+    height: 470px;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 100px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 300px;
+    max-height: 400px;
+    width: 100%;
+    height: 350px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.checkbox-input {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.checkbox-custom::after {
+    content: '\2713';
+    font-size: 20px;
+    color: #007BFF;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    opacity: 1;
+    transform: scale(1);
+}

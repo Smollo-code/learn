@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="container_register">
+    <form action="register.php" method="POST">
+        <h2>Registrierung</h2>
+        <div class="form-group">
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required>
+        </div>
+        <div class="form-group">
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="strasse">Straße:</label>
+            <input type="text" id="strasse" name="strasse" required>
+        </div>
+        <div class="form-group">
+            <label for="newsletter" class="checkbox-container">
+                <input type="checkbox" id="newsletter" name="newsletter" class="checkbox-input">
+                <div class="checkbox-custom"></div>
+                <span class="checkbox-label">Newsletter abonnieren</span>
+            </label>
+        </div>
+
+        <button type="submit">Registrieren</button>
+    </form>
+</div>
+</body>
+</html>
