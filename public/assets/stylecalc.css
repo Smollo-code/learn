@@ -1,0 +1,90 @@
+/* stylecalc.css */
+
+/* Allgemeine Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container für das gesamte Formular */
+div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Anpassung: Ändere die Richtung auf Spalte */
+    align-items: center; /* Anpassung: Zentriere die Elemente horizontal */
+}
+
+/* Stil für die Eingabefelder */
+.input {
+    display: block; /* Anpassung: Ändere auf Blockelement, um die Eingabefelder untereinander anzuzeigen */
+    padding: 10px;
+    text-align: center; /* Anpassung: Zentriere den Text in den Eingabefeldern */
+}
+
+/* Spezieller Container für das Ergebnisfeld */
+.special_div {
+    box-shadow: none; /* Anpassung: Entferne den Schatten */
+    border: none; /* Anpassung: Entferne die Umrandung */
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Überschrift */
+h2 {
+    font-size: 24px;
+}
+
+/* Stil für das Formular */
+form {
+    text-align: center;
+    width: 100%;
+}
+
+/* Stil für Labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Stil für Eingabefelder und das Auswahlfeld */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /* Anpassung: Verringere den Abstand zwischen den Eingabefeldern */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Reduziere die Breite der Eingabefelder */
+input[type="text"] {
+    width: 70%;
+}
+
+/* Stil für den "Berechne"-Button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+}
+
+/* Verstecke das versteckte Eingabefeld */
+input[type="hidden"] {
+    display: none;
+}

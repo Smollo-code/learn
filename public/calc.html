@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylecalc.css">
+</head>
+<body>
+<div>
+    <form action="calc.php" method="post">
+        <h2>Taschenrechner</h2>
+        <div class="input">
+            <label for="input_1">Input1</label>
+            <input type="text" id="input_1" name="input_1" required>
+        </div>
+        <div class="input">
+            <label for="input_2">Input2</label>
+            <input type="text" id="input_2" name="input_2" required>
+        </div>
+        <label for="operator">Choose a Operator:</label>
+
+        <div>
+            <select name="Operation" id="operator" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <button type="submit">Berechne</button>
+
+        <div class="special_div">
+            <input type="text" name="Result" value="<?= $result ?>" disabled>
+        </div>
+    </form>
+</div>
+</body>
+</html>
