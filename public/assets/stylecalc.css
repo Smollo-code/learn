@@ -17,7 +17,7 @@ div {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.9px rgba(0, 0, 0, 10);
     text-align: center;
     display: flex;
     flex-direction: column; /* Anpassung: Ändere die Richtung auf Spalte */
@@ -28,7 +28,12 @@ div {
 .input {
     display: block; /* Anpassung: Ändere auf Blockelement, um die Eingabefelder untereinander anzuzeigen */
     padding: 10px;
+    box-shadow: 0 0 0 0;
     text-align: center; /* Anpassung: Zentriere den Text in den Eingabefeldern */
+}
+
+.operator {
+    box-shadow: 0 0 0 0;
 }
 
 /* Spezieller Container für das Ergebnisfeld */

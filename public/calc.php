@@ -15,23 +15,27 @@ echo multi($value1, $value2 === null ? 100 : $value2);
 $result = $value1 = 5 ? 'ist 5' : 'nicht fünf';
 echo $result;*/
 
+require '../src/Calculator.php';
 
-function calculate (float|int $input1, float|int $input2, string $operator) : float|int|string
-{
-    return match ($operator) {
-        '+' => $input1 + $input2,
-        '-' => $input1 - $input2,
-        '*' => $input1 * $input2,
-        '/' => $input1 / $input2,
+$num1 = $_POST['input_1'] ?? 0;
+$num2 = ($_POST['input_2'] ?? 0);
 
-    };
+if (!is_numeric($num1)) {
+    $num1 = 0;
 }
 
-$input1 = (float) $_POST['input_1'];
-$input2 = (float) $_POST['input_2'];
-$operator = (string) $_POST['Operation'];
+if (!is_numeric($num2)) {
+    $num2 = 0;
+}
 
-$result = calculate($input1, $input2, $operator);
-require 'calc.html';
-?>
+$input1 = $num1;
+$input2 = $num1;
+$operator = (string) ($_POST['Operation'] ?? '*');
+
+$calculator = new Calculator($input1, $input2, $operator);
+$calculator->calculate();
+$result = $calculator->getResult();
+require 'rechner.php';
+
+
 
