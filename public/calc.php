@@ -15,17 +15,39 @@ echo multi($value1, $value2 === null ? 100 : $value2);
 $result = $value1 = 5 ? 'ist 5' : 'nicht fünf';
 echo $result;*/
 
+require '../src/Division.php';
+require '../src/Multi.php';
+require '../src/Plus.php';
+require '../src/Minus.php';
+
+require '../src/Math.php';
+require '../src/CalculatorInterface.php';
 require '../src/Calculator.php';
 
-$num1 = $_POST['input_1'] ?? 0;
-$num2 = ($_POST['input_2'] ?? 0);
+/*try {
+    $exception = new LogicException();
+    throw $exception;
+    echo 'Hallo Welt';
+} catch (RuntimeException $exception) {
+    echo $exception->getMessage();
+} catch (LogicException $exception) {
+    echo $exception->getMessage();
+} finally {
+    exit()/
+}*/
+$num1 = (float) ($_POST['input_1'] ?? 0);
+$num2 = (float) ($_POST['input_2'] ?? 0);
 
 if (!is_numeric($num1)) {
-    $num1 = 0;
+    $num1 = 0.0;
 }
 
 if (!is_numeric($num2)) {
-    $num2 = 0;
+    $num2 = 0.0;
+}
+
+if ($num2 === 0.0) {
+    $num2 = 1.0;
 }
 
 $input1 = $num1;
