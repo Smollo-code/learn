@@ -29,7 +29,7 @@ if (!is_numeric($num2)) {
 }
 
 $input1 = $num1;
-$input2 = $num1;
+$input2 = $num2;
 $operator = (string) ($_POST['Operation'] ?? '*');
 
 $calculator = new Calculator($input1, $input2, $operator);
