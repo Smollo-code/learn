@@ -35,8 +35,13 @@ require '../src/Calculator.php';
 } finally {
     exit()/
 }*/
-$num1 = (float) ($_POST['input_1'] ?? 0);
-$num2 = (float) ($_POST['input_2'] ?? 0);
+
+
+$num1 = ($_POST['input_1'] ?? 0);
+$num2 = ($_POST['input_2'] ?? 0);
+
+$num1 = (float) str_replace(',', '.', $num1);
+$num2 = (float) str_replace(',', '.', $num2);
 
 if (!is_numeric($num1)) {
     $num1 = 0.0;
@@ -50,10 +55,7 @@ if ($num2 === 0.0) {
     $num2 = 1.0;
 }
 
-function replaceComma(float $input) : float
-{
-    return $input[] = str_replace(',', '.', $input);
-}
+
 
 $input1 = $num1;
 $input2 = $num2;
