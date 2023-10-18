@@ -1,4 +1,4 @@
 # learn
-To run just install Docker \n
-Then cd docker/ \n
-docker compose up 
+<p>To run just install Docker <br>
+Then cd docker/ <br>
+docker compose up</p> 
