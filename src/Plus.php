@@ -1,8 +1,8 @@
 <?php
 
-class Plus extends Multi
+class Plus implements OperationInterface
 {
-    public function plus(float $input1, float $input2) : float
+    public function calculate(float $input1, float $input2) : float
     {
         return $input1 + $input2;
     }

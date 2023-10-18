@@ -1,8 +1,8 @@
 <?php
 
-class Division
+class Division implements OperationInterface
 {
-    protected function divide(float $input1, float $input2) : float
+    public function calculate(float $input1, float $input2) : float
     {
         return $input1 / $input2;
     }

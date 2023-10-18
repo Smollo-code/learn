@@ -1,6 +1,6 @@
 <?php
 
-class Math extends Minus
+class Math
 {
     protected float|int $result = 0;
 }

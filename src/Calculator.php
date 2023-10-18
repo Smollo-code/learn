@@ -7,24 +7,31 @@ class Calculator extends Math implements CalculatorInterface
     private const MATH_MULTI = '*';
     private const MATH_DIVIDE = '/';
 
+    private OperationInterface $plus;
+    private OperationInterface $minus;
+    private OperationInterface $multi;
+    private OperationInterface $division;
+
     public function __construct(
-        private float $input1,
-        private float $input2,
-        private string $operator
     ) {
+        $this->plus = new Plus();
+        $this->minus = new Minus();
+        $this->multi = new Multi();
+        $this->division = new Division();
+
     }
     public function getResult() : float
     {
         return round($this->result, 2);
     }
 
-    public function calculate() : void
+    public function calculate(float $input1, float $input2, string $operator) : void
     {
-        $this->result = match ($this->operator) {
-            Calculator::MATH_PLUS => $this->plus($this->input1, $this->input2),
-            Calculator::MATH_MINUS => $this->minus($this->input1, $this->input2),
-            Calculator::MATH_MULTI => $this->multi($this->input1, $this->input2),
-            Calculator::MATH_DIVIDE => $this->divide($this->input1, $this->input2),
+        $this->result = match ($operator) {
+            self::MATH_PLUS => $this->plus->calculate($input1, $input2),
+            self::MATH_MINUS => $this->minus->calculate($input1, $input2),
+            self::MATH_MULTI => $this->multi->calculate($input1, $input2),
+            self::MATH_DIVIDE => $this->division->calculate($input1, $input2),
             default => 0.0,
         };
     }

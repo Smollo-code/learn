@@ -15,11 +15,11 @@ echo multi($value1, $value2 === null ? 100 : $value2);
 $result = $value1 = 5 ? 'ist 5' : 'nicht fünf';
 echo $result;*/
 
+require '../src/OperationInterface.php';
 require '../src/Division.php';
 require '../src/Multi.php';
 require '../src/Plus.php';
 require '../src/Minus.php';
-
 require '../src/Math.php';
 require '../src/CalculatorInterface.php';
 require '../src/Calculator.php';
@@ -50,12 +50,17 @@ if ($num2 === 0.0) {
     $num2 = 1.0;
 }
 
+function replaceComma(float $input) : float
+{
+    return $input[] = str_replace(',', '.', $input);
+}
+
 $input1 = $num1;
 $input2 = $num2;
 $operator = (string) ($_POST['Operation'] ?? '*');
 
-$calculator = new Calculator($input1, $input2, $operator);
-$calculator->calculate();
+$calculator = new Calculator();
+$calculator->calculate($input1, $input2, $operator);
 $result = $calculator->getResult();
 require 'rechner.php';
 
